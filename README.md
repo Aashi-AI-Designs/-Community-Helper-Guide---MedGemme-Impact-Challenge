@@ -188,20 +188,13 @@ python medgemma_community_helper_FINAL.py
 ```
 community-helper-guidebook/
 │
-├── medgemma_community_helper_FINAL.py   # Main Kaggle notebook (19 cells)
+├── medgemma_community_helper_FINAL.py   # Main Kaggle notebook
 ├── PRODUCTION_ROADMAP.md                # Production upgrade plan
 ├── KAGGLE_SETUP.md                      # Detailed Kaggle setup guide
 ├── requirements.txt                     # Python dependencies
 ├── .gitignore                           # Excludes models, cache, audio
 │
-├── docs/
-│   ├── writeup.docx                     # Kaggle competition writeup
-│   └── video_script.md                  # 3-minute video script
-│
 └── README.md
-```
-
----
 
 ## Assumptions & Limitations
 
