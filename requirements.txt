@@ -1,0 +1,29 @@
+# Core ML
+torch>=2.1.0
+transformers>=4.40.0
+accelerate>=0.27.0
+bitsandbytes>=0.43.0
+
+# Speech-to-Text
+openai-whisper
+pydub
+ffmpeg-python
+
+# Image
+Pillow
+
+# RAG
+faiss-cpu
+sentence-transformers
+PyMuPDF
+
+# Translation
+deep-translator
+
+# UI
+gradio>=4.0.0
+
+# Utilities
+sentencepiece
+protobuf
+numpy
