@@ -1,4 +1,4 @@
-# 🚀 Kaggle Setup Guide
+# Kaggle Setup Guide
 
 ## Step-by-Step Instructions to Run the Community Helper Guidebook on Kaggle
 
@@ -58,15 +58,12 @@ from kaggle_secrets import UserSecretsClient
 secrets  = UserSecretsClient()
 hf_token = secrets.get_secret("HF_TOKEN")
 login(token=hf_token)
-print("✅ HuggingFace login successful.")
+print("HuggingFace login successful.")
 ```
 
 ---
 
-## 6. Copy Notebook Cells
-
-Copy each `# %% [code]` block from `medgemma_community_helper_FINAL.py`
-as a separate cell in your Kaggle notebook. The file has 19 cells total.
+## 6. Notebook Cells
 
 Cell structure:
 | Cell | Content |
@@ -122,23 +119,8 @@ Running on public URL: https://xxxxxxxxxxxx.gradio.live
 
 This URL is public and shareable for 72 hours. Include it in your Kaggle submission.
 
----
 
-## 9. Common Errors & Fixes
-
-| Error | Cause | Fix |
-|---|---|---|
-| `GatedRepoError: 401` | License not accepted or wrong token type | Accept license at HF. Use Classic Read token, not fine-grained. |
-| `GatedRepoError: 403` | Fine-grained token missing gated repo permission | Create a new Classic token instead |
-| `KeyError: added_tokens` | Wrong model path — Keras format loaded | Use `"google/medgemma-4b-it"` string, not local path |
-| `AttributeError: shape` | BatchEncoding returned instead of tensor | Check `call_medgemma()` has `if hasattr(input_ids, "input_ids")` fix |
-| `SyntaxWarning: invalid escape sequence` | pydub Python 3.12 compatibility | Harmless — ignore and continue |
-| Prompt truncated warning | Synthesis prompt too long | Expected — model still generates correctly |
-| Output in English despite Hindi selected | Wrong variable printed in verbose mode | In `run_full_pipeline`, print `final_pack_local` not `final_pack_en` |
-
----
-
-## 10. Testing the Gradio UI
+## 9. Testing the Gradio UI
 
 Use these example inputs to test all three paths:
 
